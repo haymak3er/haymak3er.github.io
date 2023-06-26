@@ -4,6 +4,7 @@ idx = 0;
 $(document).ready(function() {
     $('#githubplug-label').click(function() { document.location = 'https://github.com/haymak3er/' });
     $('#projects-label').click(function() { document.location.pathname = `projects.html` });
+    $('#email-label').click(function() { alert(`mailto:${$('#email-label').val()}`); document.location = `mailto:${$('#email-label').val()}` });
 })
 
 const interval = setInterval(function() {
