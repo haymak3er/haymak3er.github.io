@@ -33,15 +33,17 @@ body::-webkit-scrollbar-thumb {
 .bottom-header-wrapper {
     position: absolute;
     width: 100%;
-    top: 140px;
+    top: 100px;
 }
 
-.rainbow {
+.rainbow-header {
     text-align: center;
     font-size: 50px;
     font-family: monospace;
     letter-spacing: 6px;
+}
 
+.rainbow {
     background: linear-gradient(to right, #ff0000, #ffa500 , #ffff00, #bfff00, #6666ff, #A020F0);
     -webkit-background-clip: text;
     background-clip: text;
@@ -66,6 +68,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     padding: 10px 0 10px 0;
     margin: 0;
+    top: 80%;
 }
 
 .footer-label {
@@ -119,6 +122,117 @@ body::-webkit-scrollbar-thumb {
 .ref-link:hover:after { 
     width: 100%; 
     left: 0; 
+}
+
+.info-wrapper {
+    margin-top: 100px;
+    margin-left: 25%;
+    width: 50%;
+    height: fit-content;
+    border-radius: 5px;
+    
+    background-color: #222222;
+    border: 1px solid #EEEEEE;
+}
+
+.fade {
+    opacity: 0;
+    animation: fade_on_load ease 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 0.80s;
+}
+
+.footer-fade {
+    opacity: 0;
+    animation: fade_on_load ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.reg-label {
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin: 0;
+
+    color: #EEEEEE
+}
+
+.title-label {
+    font-weight: 800;
+    font-size: 24px;
+    padding: 0;
+    width: fit-content;
+    margin: 20px 20px 0 20px;
+
+    color: #FFFFFF;
+    border-bottom: 2px solid #676767;
+}
+
+.point {
+    margin: 0 20px 0 20px;
+}
+
+.points-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.line {
+    border-left: 4px solid #EEEEEE;
+    height: 0px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: 0;
+
+    animation: line_animation ease 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.more-desc {
+    text-align: center;
+}
+
+@keyframes sts {
+    0% {
+        transform: rotate(4deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes line_animation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes fade_on_load {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes rainbow_animation {
